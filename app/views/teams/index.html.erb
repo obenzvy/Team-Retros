@@ -1,6 +1,6 @@
-<h1>Listing teams</h1>
+<h1>Teams</h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th></th>
@@ -10,10 +10,10 @@
 
 <% @teams.each do |team| %>
   <tr>
-    <td><%= link_to team.name, new_retro_url(:id => team.id) %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to team.name, new_retro_url(:team_id => team.id) %></td>
+    <td><%= link_to 'Create a New Retro', new_retro_url(:team_id => team.id), :class => "btn btn-primary"  %></td>
+    <td><%= link_to 'Settings', edit_team_path(team), :class => "btn btn-warning"  %></td>
+    <td><%= link_to 'Toast', team, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
