@@ -1,4 +1,7 @@
 Retros::Application.routes.draw do
+
+
+  root :to => "pages#index"
   resources :retros
 
   resources :teams
