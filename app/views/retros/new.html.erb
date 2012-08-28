@@ -3,23 +3,6 @@
 
 <%= render 'form' %>
 
-<%= render 'aha_form' %>
-<br/>
-<% if @notes.count > 0 %>
-  <ul>
-  <% @notes.each do |note| %>
-    <li> <%= note.note %></li>
-  <% end %>
-  </ul>
-<% end %>
-<%= render 'start_form' %>
-<br/>
-
-<%= render 'stop_form' %>
-<br/>
-
-<%= render 'continue_form' %>
-<br/>
 
 
 <%= link_to 'Back', retros_path %>
