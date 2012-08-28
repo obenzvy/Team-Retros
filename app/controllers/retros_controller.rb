@@ -25,8 +25,7 @@ class RetrosController < ApplicationController
   # GET /retros/new.json
   def new
     @retro = Retro.new
-    @note = Note.new
-    @notes = Note.all
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @retro }
@@ -36,6 +35,8 @@ class RetrosController < ApplicationController
   # GET /retros/1/edit
   def edit
     @retro = Retro.find(params[:id])
+    @note = Note.new
+    @notes = Note.all
   end
 
   # POST /retros
