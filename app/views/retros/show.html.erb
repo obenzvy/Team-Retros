@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Team:</b>
+  <%= @retro.team_id %>
+</p>
+
+<p>
+  <b>Comment type:</b>
+  <%= @retro.comment_type %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @retro.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_retro_path(@retro) %> |
+<%= link_to 'Back', retros_path %>
