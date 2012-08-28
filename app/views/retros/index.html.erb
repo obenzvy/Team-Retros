@@ -3,8 +3,7 @@
 <table>
   <tr>
     <th>Team</th>
-    <th>Comment type</th>
-    <th>Comment</th>
+    <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +12,7 @@
 <% @retros.each do |retro| %>
   <tr>
     <td><%= retro.team_id %></td>
-    <td><%= retro.comment_type %></td>
-    <td><%= retro.comment %></td>
+    <td><%= retro.name %></td>
     <td><%= link_to 'Show', retro %></td>
     <td><%= link_to 'Edit', edit_retro_path(retro) %></td>
     <td><%= link_to 'Destroy', retro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,9 +21,5 @@
 </table>
 
 <br />
-
-
-
-
 
 <%= link_to 'New Retro', new_retro_path %>

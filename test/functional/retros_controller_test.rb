@@ -18,7 +18,7 @@ class RetrosControllerTest < ActionController::TestCase
 
   test "should create retro" do
     assert_difference('Retro.count') do
-      post :create, retro: { comment: @retro.comment, comment_type: @retro.comment_type, team_id: @retro.team_id }
+      post :create, retro: { name: @retro.name, team_id: @retro.team_id }
     end
 
     assert_redirected_to retro_path(assigns(:retro))
@@ -35,7 +35,7 @@ class RetrosControllerTest < ActionController::TestCase
   end
 
   test "should update retro" do
-    put :update, id: @retro, retro: { comment: @retro.comment, comment_type: @retro.comment_type, team_id: @retro.team_id }
+    put :update, id: @retro, retro: { name: @retro.name, team_id: @retro.team_id }
     assert_redirected_to retro_path(assigns(:retro))
   end
 

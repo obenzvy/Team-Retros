@@ -1,3 +1,3 @@
 class Retro < ActiveRecord::Base
-  attr_accessible :comment, :comment_type, :team_id
+  attr_accessible :name, :team_id
 end

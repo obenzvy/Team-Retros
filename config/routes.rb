@@ -1,9 +1,11 @@
 Retros::Application.routes.draw do
 
 
-  root :to => "pages#index"
   resources :retros
 
+  resources :notes
+
+  root :to => "pages#index"
   resources :teams
 
   # The priority is based upon order of creation:
