@@ -62,7 +62,7 @@ class RetrosController < ApplicationController
 
     respond_to do |format|
       if @retro.update_attributes(params[:retro])
-        format.html { redirect_to @retro, notice: 'Retro was successfully updated.' }
+        format.html { redirect_to @retros, notice: 'Retro was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828145948) do
+ActiveRecord::Schema.define(:version => 20120828160644) do
 
   create_table "notes", :force => true do |t|
     t.integer  "retro_id"
     t.string   "note"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "category"
   end
 
   create_table "retros", :force => true do |t|

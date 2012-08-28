@@ -2,22 +2,41 @@
 
 <%= render 'aha_form' %>
 <br/>
-<% if @notes.count > 0 %>
-  <ul>
-  <% @notes.each do |note| %>
-
+<ul>
+<% @notes.each do |note| %>
+  <% if note.category == "aha" %>
     <li> <%= note.note %></li>
   <% end %>
-  </ul>
 <% end %>
+</ul>
+
 <%= render 'start_form' %>
 <br/>
-
+<ul>
+<% @notes.each do |note| %>
+  <% if note.category == "start" %>
+    <li> <%= note.note %></li>
+  <% end %>
+<% end %>
+</ul>
 <%= render 'stop_form' %>
 <br/>
 
+<ul>
+<% @notes.each do |note| %>
+  <% if note.category == "stop" %>
+    <li> <%= note.note %></li>
+  <% end %>
+<% end %>
+</ul>
 <%= render 'continue_form' %>
 <br/>
-
+<ul>
+<% @notes.each do |note| %>
+  <% if note.category == "continue" %>
+    <li> <%= note.note %></li>
+  <% end %>
+<% end %>
+</ul>
 <%= link_to 'Show', @retro %> |
 <%= link_to 'Back', retros_path %>
