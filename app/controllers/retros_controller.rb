@@ -3,6 +3,7 @@ class RetrosController < ApplicationController
   # GET /retros.json
   def index
     @retros = Retro.all
+    @retro = Retro.new
 
     respond_to do |format|
       format.html # index.html.erb
