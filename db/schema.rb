@@ -11,14 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120828140843) do
+ActiveRecord::Schema.define(:version => 20120828145948) do
+
+  create_table "notes", :force => true do |t|
+    t.integer  "retro_id"
+    t.string   "note"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "retros", :force => true do |t|
     t.integer  "team_id"
-    t.string   "comment_type"
-    t.string   "comment"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "teams", :force => true do |t|
