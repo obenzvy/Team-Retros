@@ -12,7 +12,7 @@
   <% end %>
 
     <%= f.hidden_field :category, :value => "stop" %>
-    <%= f.hidden_field :retro_id %>
+    <%= f.hidden_field :retro_id, :value => @retro.id %>
 
     Stop<br />
     <%= f.text_field :note %>
